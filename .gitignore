@@ -1,1 +1,7 @@
 .DS_Store
+
+/samples/PluginsMVC3Sample/bin
+/samples/PluginsMVC3Sample/obj
+/samples/PluginsAspxSample3.5/obj
+/samples/PluginsMVC3Sample/_ReSharper.PluginsMVC3Sample
+/samples/PluginsAspxSample3.5/_ReSharper.PluginsAspxSample3.5
