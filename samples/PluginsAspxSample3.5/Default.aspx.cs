@@ -27,7 +27,7 @@ namespace PluginsAspxSample
 
 			// Make webrequest
 			// You url can be found on http://b2b.trustpilot.com/Modules/Plugins, where you also find the documentation.
-			const string URL = "//s3-eu-west-1.amazonaws.com/trustpilot/tpelements/917278/f.json.gz";
+            const string URL = "http://s.trustpilot.com/tpelements/917278/f.json.gz";
 			var request = (HttpWebRequest)WebRequest.Create(URL);
 			request.Method = WebRequestMethods.Http.Get;
 			request.AutomaticDecompression = DecompressionMethods.GZip; // Remember to unzip the feed
@@ -37,7 +37,6 @@ namespace PluginsAspxSample
 			using (var response = (HttpWebResponse)request.GetResponse())
 			using (var responseStream = response.GetResponseStream())
 			{
-				Debug.Assert(responseStream != null, "responseStream != null");
 				feedData = new StreamReader(responseStream).ReadToEnd();
 			}
 
