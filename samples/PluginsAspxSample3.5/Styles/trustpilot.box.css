@@ -1,0 +1,167 @@
+﻿p:first-letter, h3:first-letter { text-transform: capitalize; }
+
+p.r-l,p.r-s, a.footer span.logo { background:url(//s3.amazonaws.com/trustbox.trustpilot.com/trustpilotbox/sprite.png) no-repeat; }
+p.r-l { display:inline-block; width:113px; height:21px; margin:5px 0 0; }
+p.r-s { display:inline-block; width:64px; height:12px; }
+p.l-s0 { background-position:-2px -2px; }
+p.l-s1 { background-position:-2px -27px; }
+p.l-s2 { background-position:-2px -52px; }
+p.l-s3 { background-position:-2px -77px; }
+p.l-s4 { background-position:-2px -102px; }
+p.l-s5 { background-position:-2px -127px; }
+p.s-s0 { background-position:-2px -151px; }
+p.s-s1 { background-position:-2px -166px; }
+p.s-s2 { background-position:-2px -181px; }
+p.s-s3 { background-position:-2px -196px; }
+p.s-s4 { background-position:-2px -211px; }
+p.s-s5 { background-position:-2px -226px; }
+
+.tp-box {
+  background:#FFFFFF;
+  border:1px solid #444444;
+  -webkit-border-top-left-radius: 5px;
+      -moz-border-radius-topleft: 5px; 
+           border-radius-topleft: 5px;
+  -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topright: 5px;
+           border-radius-topright: 5px;           
+  -webkit-border-bottom-right-radius: 5px;
+      -moz-border-radius-bottomright: 5px;
+           border-radius-bottomright: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;
+           border-radius-bottomleft: 5px;
+  display:block;
+  float:left;
+  position:relative;
+  width:178px;
+}
+
+.tp-box header {
+  -webkit-border-top-left-radius: 5px; 
+      -moz-border-radius-topleft: 5px; 
+           border-radius-topleft: 5px;
+  -webkit-border-top-right-radius: 5px; 
+      -moz-border-radius-topright: 5px; 
+           border-radius-topright: 5px;
+  text-align:center;
+  padding:6px 10px 12px;
+}
+
+.tp-box header h1 { 
+  font:bold 2.182em/1.255em sans-serif;
+  margin:0;
+}
+
+.tp-box header p.review-count { 
+  margin:5px 0 0; 
+}
+
+.tp-box h2 {
+  background:#DDDDDD;
+  font-size:1.273em;
+  font-weight:700;
+  color:#444444;
+  padding:5px 10px;
+}
+
+.tp-box section.reviews {
+  display:block;
+  height:none;
+  overflow-y:auto;
+  margin:0 0 25px;
+  padding:10px 10px 0;
+}
+
+.tp-box section.reviews article {
+  border-bottom:1px solid #DDDDDD;
+  margin:0 0 15px;
+  padding:0 0 10px;
+}
+
+.tp-box section.reviews article a {
+  color:#CE5600;
+}
+
+.tp-box section.reviews article:last-child {
+  border-bottom:none;
+  margin:0;
+}
+
+.tp-box time {
+  display:block;
+  float:right;
+  -moz-opacity:0.6;
+  opacity:0.6;
+  position:relative;
+  top:-2px;
+  text-transform:lowercase;
+}
+
+.tp-box h3 {
+  clear:both;
+  color:#444444;
+  font-size:1.091em;
+  font-weight:700;
+  padding:6px 0 0;
+}
+
+.tp-box p.desc {
+  padding:0 0 8px;
+}
+
+.tp-box img.user-img {
+  float:left;
+  padding:0 6px 0 0;
+}
+
+.tp-box p.author {
+  position:relative;
+  font-style:italic;
+  top:-2px;
+}
+
+.tp-box a.footer {
+  background:#DDDDDD;
+  -webkit-border-bottom-right-radius: 5px;
+      -moz-border-radius-bottomright: 5px;
+           border-radius-bottomright: 5px;
+
+  -webkit-border-bottom-left-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;
+           border-radius-bottomleft: 5px;
+  font-size:11px;
+  font-weight:700;
+  width:100%;
+  padding:0 0 4px;
+  position:absolute; bottom:0;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+
+.tp-box a.footer span {
+  display:inline-block;
+  float:left;
+  margin:5px 0 0;
+}
+
+.tp-box a.footer span.trust {
+  color:#000;
+  margin:5px 0 0 4px;
+}
+
+.tp-box a.footer span.pilot {
+  color:#444;
+}
+
+.tp-box a.footer span.logo {
+  background-position: -2px -265px;
+  height:12px;
+  margin:6px 0 0 10px;
+  width:12px;
+}
+
+.tp-box div.clear {
+  clear:both;
+  font-size:1px;
+}

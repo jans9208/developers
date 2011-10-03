@@ -1,0 +1,9 @@
+﻿@model PluginsMVC3Sample.Models.Trustpilot.FeedModel
+@{
+    ViewBag.Title = "Front Page";
+    <link rel="stylesheet" type="text/css" href="../../Content/trustpilot.box.css"></link>
+}
+
+<h1>Front Page</h1>
+@* Here we add the an Trustpilot box to the view. The Trustpilot feed information is passed on to the partial view. *@
+@Html.Partial("~/Views/Trustpilot/_Box.cshtml", Model)
