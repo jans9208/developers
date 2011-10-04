@@ -108,8 +108,197 @@
         <section class="row" id="jsondoc">
           <div class="span16">
             <h2>JSON Documentation</h2>
-            <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			
+			<p>
+				We deliver the feed as a single JSON object.
+			</p>
+			
+			<h3>File location</h3>
+			<p>
+				The link for your specific JSON file can be found at <a href="http://b2b.trustpilot.com/Modules/Plugins">http://b2b.trustpilot.com/Modules/Plugins</a> (login required).<br />
+				A demo feed can be found at <a href="http://s.trustpilot.com/tpelements/917278/f.json.gz">http://s.trustpilot.com/tpelements/917278/f.json.gz</a>.
+			</p>
+			
+			<h3>Compression</h3>
+			<p>
+				The JSON feed file is zipped with gzip.
+			</p>
+			
+			<h3>Elements of the feed</h3>
+			
+			<h4>Feed root</h4>
+			<p>
+				The feed root contains the following values:
+			</p>
+			<ul>
+				<li>
+					<b>Categories</b> [Array of <a href="#JSON.Elements.Category">Category</a>]<br/>
+					The categories of this domain. May contain zero to multiple elements.
+				</li>
+				<li>
+					<b>DomainName</b> [string]<br/>
+					The name of the domain, e.g. "demoshop.com".
+				</li>
+				<li>
+					<b>FeedUpdateTime</b> [<a href="#JSON.Elements.Time">Time</a>]<br/>
+					The time this feed was generated.
+				</li>
+				<li>
+					<b>ReviewCount</b> [<a href="#JSON.Elements.ReviewCount">ReviewCount</a>]<br/>
+					Total count of reviews and distribution of revers per rating.
+				</li>
+				<li>
+					<b>ReviewPageUrl</b> [string]<br/>
+					The url for the review page of this domain on trustpilot. Use this to link to all the reviews.
+				</li>
+				<li>
+					<b>Reviews</b> [Array of <a href="#JSON.Elements.Review">Review</a>]<br/>
+					A list of up to 10 reviews of this domain.<br/>
+					These reviews are selected by:
+					<ul>
+						<li>The reviews that the administrator of the domain have selected for the feed</li>
+						<li>Select from the remaining reviews, order by rating descending, then by date descending</li>
+					</ul>
+				</li>
+				<li>
+					<b>TrustScore</b> [<a href="#JSON.Elements.TrustScore">TrustScore</a>]<br/>
+					Information about the score of the domain, measured in both rating (0-100) and number of stars (1-5).
+				</li>
+			</ul>
+			
+			<h4 id="JSON.Elements.Category">Category</h4>
+			<ul>
+				<li>
+					<b>Count</b> [int]<br/>
+					The amount of domains in the category.
+				</li>
+				<li>
+					<b>ImageUrls</b> [Hash of string, string]<br/>
+					A dictionary of urls to images showing the position of the domain in the category, e.g. in the top 3.<br/>
+					The image is in different sizes and can be found with the keys, "i100", "i120", "i140", "i180", "i220", "i280" for the six different pixel sizes.
+				</li>
+				<li>
+					<b>Name</b> [string]<br/>
+					The name of the category localized to the language of the domain.
+				</li>
+				<li>
+					<b>Position</b> [int]<br/>
+					The position in the category.
+				</li>
+			</ul>
+			
+			<h4 id="JSON.Elements.Time">Time</h4>
+			<ul>
+				<li>
+					<b>Human</b> [string]<br/>
+					A human readable representation of the time localized to the language of the domain. e.g. '4 October 2011 10:16:52 GMT'
+				</li>
+				<li>
+					<b>HumanDate</b> [string]<br/>
+					A human readable representation of the date part of the time localized to the language of the domain. E.g. '15. Oct'
+				</li>
+				<li>
+					<b>UnixTime</b> [long]<br/>
+					The number of seconds since January 1st, 1970 to this time.
+				</li>
+			</ul>
+			
+			<h4 id="JSON.Elements.ReviewCount">ReviewCount</h4>
+			<ul>
+				<li>
+					<b>DistributionOverStars</b> [Array of int]<br/>
+					The number of reviews grouped by number of stars. E.g. [0, 1, 5, 4, 12] for a domain that have zero 1-starred reviews, 1 2-starred review, 5 3-starred reviews, etc...
+				</li>
+				<li>
+					<b>Total</b> [int]<br/>
+					The total amount of reviews on this domain.
+				</li>
+			</ul>
+			
+			<h4 id="JSON.Elements.Review">Review</h4>
+			<ul>
+				<li>
+					<b>CompanyReply</b> [string]<br/>
+					The company reply of this review if any, otherwise <i>null</i>
+				</li>
+				<li>
+					<b>Content</b> [string]<br/>
+					The main content of the review.
+				</li>
+				<li>
+					<b>Created</b> [<a href="#JSON.Elements.Time">Time</a>]<br/>
+					The creation time of the review.
+				</li>
+				<li>
+					<b>Title</b> [string]<br/>
+					The title of the review.
+				</li>
+				<li>
+					<b>TrustScore</b> [<a href="#JSON.Elements.TrustScore">TrustScore</a>]<br/>
+					The score of the review.
+				</li>
+				<li>
+					<b>User</b> [<a href="#JSON.Elements.User">User</a>]<br/>
+					The author of the review.
+				</li>
+			</ul>
+			
+			<h4 id="JSON.Elements.TrustScore">TrustScore</h4>
+			<ul>
+				<li>
+					<b>Human</b> [string]<br />
+					A description of the score, localized to the language of the domain. E.g. 'Excellent' or 'Good'.
+				</li>
+				<li>
+					<b>Score</b> [int]<br />
+					A score from 0 to 100.
+				</li>
+				<li>
+					<b>Stars [int]<br />
+					A number of start from 1 to 5.
+				</li>
+				<li>
+					<b>StarsImageUrls</b> [Hash of string, string] <br />
+					Urls for images that shows the number of stars. The images come in three different sizes which can be found on the keys "small", "medium", and "large".
+				</li>
+			</ul>
+			
+			<h4 id="JSON.Elements.User">User</h4>
+			<ul>
+				<li>
+					<b>City</b> [string]<br />
+					The city of the user if any, otherwise <i>null</i>.
+				</li>
+				<li>
+					<b>HasImage</b> [bool]<br />
+					True iff the user have a profile image.
+				</li>
+				<li>
+					<b>ImageUrls</b> [Hash of string, string]<br/>
+					Urls for the profile image in different sizes. If the user does not have a profile picture, the url will point to a default profile image.<br />
+					The sizes can be found on these keys: "i24", "i35", "i64", "i73".
+				</li>
+				<li>
+					<b>IsVerified</b> [bool]<br />
+					True iff the user have submitted an order id along with the review.
+				</li>
+				<li>
+					<b>Locale</b> [string]<br />
+					The locale or culture of the user. E.g. "en-GB" for British.
+				</li>
+				<li>
+					<b>Name</b> [string]<br />
+					The name of the user.
+				</li>
+				<li>
+					<b>ReviewCount</b> [int]<br />
+					The total number of reviews written by this user.
+				</li>
+			</ul>
+			
+			<h3>Example of a feed</h3>
 			<script src="https://gist.github.com/1261443.js"> </script>
+			
 			<p><a class="btn" href="#">View details &raquo;</a></p>
           </div>
         </section>
