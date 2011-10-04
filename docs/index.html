@@ -97,7 +97,10 @@
         <section class="row" id="introduction">
           <div class="span16">
             <h2>Basics</h2>
-            <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			<p>The feed is hosted at Amazon in Ireland and there is no limt  on how often you download it. But generally we recommend you to cache the result in an sutiable way for you so that the user does not have to wait for the server to download the feed.
+			In all the samples we use caching in some kind and as far as possible we describe other caching solution as well. How long you do want to cache is completely op to you, but keep in mind that the reviews, trustscore evt. does only update as often as you do. So caching to long will result in the data not being updated often enough, and to often result in bader performance for the user.
+			An sample feed can be download from here <a href="http://s.trustpilot.com/tpelements/917278/f.json.gz" target="_blank">http://s.trustpilot.com/tpelements/917278/f.json.gz</a>. This feed is for the demo webshop www.demoshop.com. You can see the reviews on this domain here <a href="http://www.trustpilot.com/review/demoshop.com" target="_blank">Demoshop</a>  and you are also welcome to create more reviews on this site as it is for demo usage only.
+			</p>
             <p><a class="btn" href="#">View details &raquo;</a></p>
           </div>
         </section>
@@ -113,7 +116,7 @@
 			<p><a class="btn" href="#">View details &raquo;</a></p>
           </div>
         </section>
-		   <hr />
+		<hr />
 		<!-- TPElements settings -->
         <section class="row" id="settings">
           <div class="span16">
@@ -147,12 +150,23 @@
         <!-- .NET Sample -->
         <section class="row" id="netsample">
           <div class="span16">
-            <h2>.NET Sample</h2>
-            <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            GetFeed:
+            <h2>C# .NET Sample</h2>
+            <p>Here is an sample of how to download the JSON feed and parsing it to an set of models in C# .NET. </p>
+			<p>The sample uses System.Web.Caching for caching the result as this is highly recommende to use some kind of cache. Caching in this situation makes sure that the user does not have to wait for the server to download the feed and parse it every time. </p>
+			<p>
+			There is several other way of doing this caching, one way could be just to download the feed and save it to local disk, and then every ones in a will download the file again. 
+			You could also parse this to you database and then get the data from there at every request. 
+			In all cases it could be an good idea to have an service running in the background that does fetch and parse (if need) the feed. This has the advantage that the user never has to wait for the data to download and parse. This is how ever not necessary as the feed normally is not bigger then 3-4KB.
+			</p>
+			<p>
+			If the FeedModel is not in the cache the code downloads the feed directly from the server. It then deserializes the string downloaded to an the FeedModel created for the purpose.
+			The FeedModel can then be used to show the data in the frontend.
+			</p>
+            <h4>Download and parse feed</h4>
+			<p>The code that downloads the feed and parses it.</p>
 			<script src="https://gist.github.com/1258943.js"> </script>
-			<h3>Models</h3>
-			<p></p>
+			<h4>Models</h4>
+			<p>The models the feed is parsed into.</p>
 			<!-- GetFeed -->
 			<script src="https://gist.github.com/1258991.js"> </script> 
 			<!-- Review -->
@@ -168,7 +182,7 @@
 			<!-- Time -->
 			<script src="https://gist.github.com/1258989.js"> </script>
 			<p>For the full sample go to the source and download. Please let us now if there is any thing wrong with the sample, either by pushing an fix or by submitting an issue.</p>
-			<p>The sample is aviable in both ASPX 3.5 and MVC 3 (Razor) version.</p>
+			<p>The sample is aviable in both ASP.NET 3.5 and MVC 3 (Razor) version.</p>
 			<p><a class="btn" href="#">View details &raquo;</a></p>
           </div>
         </section>
