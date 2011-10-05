@@ -39,23 +39,27 @@
             <li><a href="#">Introduction</a></li>
             <li><a href="#basics">Basics</a></li>
           </ul>
+          
           <h5>Documentation</h5>
           <ul>
             <li><a href="#jsondoc">JSON feed</a></li>
-			<li><a href="#widget">Widget</a></li>
-			<li><a href="#categorybadge">CategoryBadge</a></li>
+            <li><a href="#widget">Widget</a></li>
+            <li><a href="#categorybadge">CategoryBadge</a></li>
             <li><a href="#jsonp">JSONP</a></li>
-			<li><a href="#seo">SEO</a></li>
+            <li><a href="#seo">SEO</a></li>
           </ul>
+          
           <h5>Code samples</h5>
           <ul>
             <li><a href="#netsample">C# .NET (MVC, ASP.NET)</a></li>
             <li><a href="#phpsample">PHP</a></li>
           </ul>
+          
           <h5>Feedback</h5>
           <ul>
             <li><a href="#showcases">Showcase</a></li>
             <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contribute">Contribute</a></li>
           </ul>
         </div>
       </div>
@@ -70,19 +74,19 @@
         <!-- Example row of columns -->
         <div class="row" id="introduction">
           <div class="span6">
-            <h2>Heading</h2>
-            <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
+            <h2>Custom integrations</h2>
+            <p>Partners of Trustpilot are offered a widget that they can easily embed with an iframe on their website. However, there are limits of using an iframe to show web content on a website.</p>
+            <p>Therefore we've opened up for web developers to get our data through a JSON feed to make their own awesome Trustpilot integrations and gain some of many benefits such as SEO, faster load times etc.</p>
           </div>
           <div class="span5">
-            <h2>Heading</h2>
-             <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
+            <h2>Go creative!</h2>
+             <p>There is absolute no set limits for what you can do with the data pulled from our JSON feeds. You can show a given number of reviews, company data, scores and much more.</p>
+             <p>Go creative and make your very own integration to boost your trustiness of your business!</p>
          </div>
           <div class="span5">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
+            <h2>Showcase</h2>
+            <p>When you've built something awesome, we'd love to see it. You're more than welcome to submit your integration in our showcase section so others can see it and get inspired as well.</p>
+            <p><a class="btn" href="#">View Showcases &raquo;</a></p>
           </div>
         </div>
         
@@ -126,7 +130,7 @@
 			<h4>Feed root</h4>
 			<ul>
 				<li>
-					<b>Categories</b> [Array of <a href="#JSON.Elements.Category">Category</a>]<br/>
+					<b>Categories</b> [Array of <a href="#JSON-Elements-Category">Category</a>]<br/>
 					The categories of this domain. May contain zero to multiple elements.
 				</li>
 				<li>
@@ -134,11 +138,11 @@
 					The name of the domain, e.g. "demoshop.com".
 				</li>
 				<li>
-					<b>FeedUpdateTime</b> [<a href="#JSON.Elements.Time">Time</a>]<br/>
+					<b>FeedUpdateTime</b> [<a href="#JSON-Elements-Time">Time</a>]<br/>
 					The time this feed was generated.
 				</li>
 				<li>
-					<b>ReviewCount</b> [<a href="#JSON.Elements.ReviewCount">ReviewCount</a>]<br/>
+					<b>ReviewCount</b> [<a href="#JSON-Elements-ReviewCount">ReviewCount</a>]<br/>
 					Total count of reviews and distribution of revers per rating.
 				</li>
 				<li>
@@ -146,7 +150,7 @@
 					The url for the review page of this domain on trustpilot. Use this to link to all the reviews.
 				</li>
 				<li>
-					<b>Reviews</b> [Array of <a href="#JSON.Elements.Review">Review</a>]<br/>
+					<b>Reviews</b> [Array of <a href="#JSON-Elements-Review">Review</a>]<br/>
 					A list of up to 10 reviews of this domain.<br/>
 					These reviews are selected by:
 					<ul>
@@ -155,12 +159,12 @@
 					</ul>
 				</li>
 				<li>
-					<b>TrustScore</b> [<a href="#JSON.Elements.TrustScore">TrustScore</a>]<br/>
+					<b>TrustScore</b> [<a href="#JSON-Elements-TrustScore">TrustScore</a>]<br/>
 					Information about the score of the domain, measured in both rating (0-100) and number of stars (1-5).
 				</li>
 			</ul>
 			
-			<h4 id="JSON.Elements.Category">Category</h4>
+			<h4 id="JSON-Elements-Category">Category</h4>
 			<ul>
 				<li>
 					<b>Count</b> [int]<br/>
@@ -181,7 +185,7 @@
 				</li>
 			</ul>
 			
-			<h4 id="JSON.Elements.Time">Time</h4>
+			<h4 id="JSON-Elements-Time">Time</h4>
 			<ul>
 				<li>
 					<b>Human</b> [string]<br/>
@@ -197,7 +201,7 @@
 				</li>
 			</ul>
 			
-			<h4 id="JSON.Elements.ReviewCount">ReviewCount</h4>
+			<h4 id="JSON-Elements-ReviewCount">ReviewCount</h4>
 			<ul>
 				<li>
 					<b>DistributionOverStars</b> [Array of int]<br/>
@@ -209,7 +213,7 @@
 				</li>
 			</ul>
 			
-			<h4 id="JSON.Elements.Review">Review</h4>
+			<h4 id="JSON-Elements-Review">Review</h4>
 			<ul>
 				<li>
 					<b>CompanyReply</b> [string]<br/>
@@ -220,7 +224,7 @@
 					The main content of the review.
 				</li>
 				<li>
-					<b>Created</b> [<a href="#JSON.Elements.Time">Time</a>]<br/>
+					<b>Created</b> [<a href="#JSON-Elements-Time">Time</a>]<br/>
 					The creation time of the review.
 				</li>
 				<li>
@@ -228,16 +232,16 @@
 					The title of the review.
 				</li>
 				<li>
-					<b>TrustScore</b> [<a href="#JSON.Elements.TrustScore">TrustScore</a>]<br/>
+					<b>TrustScore</b> [<a href="#JSON-Elements-TrustScore">TrustScore</a>]<br/>
 					The score of the review.
 				</li>
 				<li>
-					<b>User</b> [<a href="#JSON.Elements.User">User</a>]<br/>
+					<b>User</b> [<a href="#JSON-Elements-User">User</a>]<br/>
 					The author of the review.
 				</li>
 			</ul>
 			
-			<h4 id="JSON.Elements.TrustScore">TrustScore</h4>
+			<h4 id="JSON-Elements-TrustScore">TrustScore</h4>
 			<ul>
 				<li>
 					<b>Human</b> [string]<br />
@@ -257,7 +261,7 @@
 				</li>
 			</ul>
 			
-			<h4 id="JSON.Elements.User">User</h4>
+			<h4 id="JSON-Elements-User">User</h4>
 			<ul>
 				<li>
 					<b>City</b> [string]<br />
@@ -317,23 +321,22 @@
           </div>
         </section>
 		   <hr />
+		
 		<!-- JSONP -->
-        <section class="row" id="jsonp">
-          <div class="span16">
-            <h2>JSONP</h2>
-            <p>If you prefer getting the data from JavaScript the JSON is also available in a JSONP format. The callback function is trustpilot_jsonp_callback. For the rest the documentation is the same as the <a href="#jsondoc">JSON feed</a>.
-			</p>			
-			<h3>File location</h3>
-			<p>
-				The link for your specific JSONP file can be found at <a href="http://b2b.trustpilot.com/Modules/Plugins">http://b2b.trustpilot.com/Modules/Plugins</a> (login required).<br />
-				A demo feed can be found at <a href="http://s.trustpilot.com/tpelements/18027/f.jsonp" target="_blank">http://s.trustpilot.com/tpelements/18027/f.jsonp</a> or if you run an SSL site you can use <a href="https://ssl.trustpilot.com/tpelements/18027/f.jsonp" target="_blank">https://ssl.trustpilot.com/tpelements/18027/f.jsonp</a> .
-			</p>
-			<p>incl. some jquery etc links</p>
-			<p><a class="btn" href="#">View details &raquo;</a></p>
-          </div>
-        </section>
-		   <hr />
-		<!-- SEO -->
+		<section class="row" id="jsonp">
+		  <div class="span16">
+		    <h2>JSONP</h2>
+		    <p>If you prefer getting the data from JavaScript the JSON is also available in a JSONP format. The callback function is trustpilot_jsonp_callback. For the rest the documentation is the same as the <a href="#jsondoc">JSON feed</a>.</p>			
+		    
+		    <h3>File location</h3>
+		    <p>The link for your specific JSONP file can be found at <a href="http://b2b.trustpilot.com/Modules/Plugins">http://b2b.trustpilot.com/Modules/Plugins</a> (login required).<br />A demo feed can be found at <a href="http://s.trustpilot.com/tpelements/18027/f.jsonp" target="_blank">http://s.trustpilot.com/tpelements/18027/f.jsonp</a> or if you run an SSL site you can use <a href="https://ssl.trustpilot.com/tpelements/18027/f.jsonp" target="_blank">https://ssl.trustpilot.com/tpelements/18027/f.jsonp</a>.</p>
+		    <p>incl. some jquery etc links</p>
+		    <p><a class="btn" href="#">View details &raquo;</a></p>
+		  </div>
+		</section>
+		
+		<hr />
+		   <!-- SEO -->
         <section class="row" id="seo">
           <div class="span16">
             <h2>Search engine optimization</h2>
@@ -379,7 +382,7 @@
 			<script src="https://gist.github.com/1258989.js"></script>
 			<p>For the full sample go to the source and download. Please let us now if there is any thing wrong with the sample, either by pushing an fix or by submitting an issue.</p>
 			<p>The sample is aviable in both ASP.NET 3.5 and MVC 3 (Razor) version.</p>
-			<p><a class="btn" href="#">View details &raquo;</a></p>
+			<p><a class="btn" href="https://github.com/trustpilot/developers/tree/master/samples">View samples on GitHub &raquo;</a></p>
           </div>
         </section>
         
@@ -389,8 +392,9 @@
         <section class="row" id="phpsample">
           <div class="span16">
             <h2>PHP Sample</h2>
-            <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-			<p><a class="btn" href="#">View details &raquo;</a></p>
+            <p>Here is an sample of how to download the JSON feed, unpack the gzip format and parse it to a PHP variable.</p>
+            <p>The sample does not use any kind caching, which is <strong>highly recommended</strong> to add if used in a production environment. Adding cache functionality will make sure that the user does not have to wait for the server to download the feed and parse it on every single request.</p>
+            <p><a class="btn" href="#">View details &raquo;</a></p>
           </div>
         </section>
 		   <hr />
