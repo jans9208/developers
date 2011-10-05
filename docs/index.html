@@ -128,11 +128,11 @@
 			</p>
 			
 			<h3>Elements of the feed</h3>
+			<p>
+				The feed is a tree structure of elements. Each attribute can either have a simple type like <code>int</code> or <code>string</code>, or a complex type. The type is described in brackets. <br />
+			</p>
 			
 			<h4>Feed root</h4>
-			<p>
-				The feed root contains the following values:
-			</p>
 			<ul>
 				<li>
 					<b>Categories</b> [Array of <a href="#JSON.Elements.Category">Category</a>]<br/>
@@ -274,7 +274,7 @@
 				</li>
 				<li>
 					<b>HasImage</b> [bool]<br />
-					True if the user have a profile image.
+					True if the user have a profile image, otherwise false.
 				</li>
 				<li>
 					<b>ImageUrls</b> [Hash of string, string]<br/>
@@ -283,7 +283,7 @@
 				</li>
 				<li>
 					<b>IsVerified</b> [bool]<br />
-					True if there is submitted an order id along with the review.
+					True if there is submitted an order id along with the review, otherwise false.
 				</li>
 				<li>
 					<b>Locale</b> [string]<br />
