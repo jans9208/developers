@@ -1,22 +1,9 @@
 ﻿p:first-letter, h3:first-letter { text-transform: capitalize; }
 
-p.r-l,p.r-s, a.footer span.logo { background:url(//s3.amazonaws.com/trustbox.trustpilot.com/trustpilotbox/sprite.png) no-repeat; }
-p.r-l { display:inline-block; width:113px; height:21px; margin:5px 0 0; }
-p.r-s { display:inline-block; width:64px; height:12px; }
-p.l-s0 { background-position:-2px -2px; }
-p.l-s1 { background-position:-2px -27px; }
-p.l-s2 { background-position:-2px -52px; }
-p.l-s3 { background-position:-2px -77px; }
-p.l-s4 { background-position:-2px -102px; }
-p.l-s5 { background-position:-2px -127px; }
-p.s-s0 { background-position:-2px -151px; }
-p.s-s1 { background-position:-2px -166px; }
-p.s-s2 { background-position:-2px -181px; }
-p.s-s3 { background-position:-2px -196px; }
-p.s-s4 { background-position:-2px -211px; }
-p.s-s5 { background-position:-2px -226px; }
-
-.tp-box {
+.tp-box 
+{
+  font-family: sans-serif;
+  font-size: 11px;
   background:#FFFFFF;
   border:1px solid #444444;
   -webkit-border-top-left-radius: 5px;
@@ -154,8 +141,9 @@ p.s-s5 { background-position:-2px -226px; }
   color:#444;
 }
 
-.tp-box a.footer span.logo {
-  background-position: -2px -265px;
+.tp-box a.footer span.logo 
+{
+  background:url(/img/Trustpilot/icon_flat_transparent_mini.png) no-repeat;
   height:12px;
   margin:6px 0 0 10px;
   width:12px;

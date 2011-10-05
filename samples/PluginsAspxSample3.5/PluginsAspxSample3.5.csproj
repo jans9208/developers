@@ -51,6 +51,24 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="img\Trustpilot\icon_flat.png" />
+    <Content Include="img\Trustpilot\icon_flat_mini.png" />
+    <Content Include="img\Trustpilot\icon_flat_transparent.png" />
+    <Content Include="img\Trustpilot\icon_flat_transparent_mini.png" />
+    <Content Include="img\Trustpilot\icon_shine.png" />
+    <Content Include="img\Trustpilot\icon_shine_mini.png" />
+    <Content Include="img\Trustpilot\icon_shine_transparent.png" />
+    <Content Include="img\Trustpilot\icon_shine_transparent_mini.png" />
+    <Content Include="img\Trustpilot\logo_flat_big.png" />
+    <Content Include="img\Trustpilot\logo_flat_normal.png" />
+    <Content Include="img\Trustpilot\logo_flat_transparent_big.png" />
+    <Content Include="img\Trustpilot\logo_flat_transparent_normal.png" />
+    <Content Include="img\Trustpilot\logo_negative_flat_transparent_big.png" />
+    <Content Include="img\Trustpilot\logo_negative_flat_transparent_normal.png" />
+    <Content Include="img\Trustpilot\logo_negative_shine_big.png" />
+    <Content Include="img\Trustpilot\logo_negative_shine_normal.png" />
+    <Content Include="img\Trustpilot\logo_shine_big.png" />
+    <Content Include="img\Trustpilot\logo_shine_normal.png" />
     <Content Include="Styles\trustpilot.box.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
