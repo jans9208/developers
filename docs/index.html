@@ -12,16 +12,10 @@
 
     <!-- Le styles -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-      }
-    </style>
-
+    <link href="assets/css/style.css" rel="stylesheet">
   </head>
-
+  
   <body>
-
     <div class="topbar">
       <div class="topbar-inner">
         <div class="container-fluid">
@@ -43,7 +37,7 @@
           <h5>Getting started</h5>
           <ul>
             <li><a href="#">Introduction</a></li>
-            <li><a href="#">Basics</a></li>
+            <li><a href="#basics">Basics</a></li>
           </ul>
           <h5>JSON Feed</h5>
           <ul>
@@ -94,35 +88,31 @@
         <hr />
         
         <!-- Basics section -->
-        <section class="row" id="introduction">
+        <section class="row" id="basics">
           <div class="span16">
             <h2>Basics</h2>
-			<p>The feed is hosted at Amazon in Ireland and there is no limt  on how often you download it. But generally we recommend you to cache the result in an sutiable way for you so that the user does not have to wait for the server to download the feed.
-			In all the samples we use caching in some kind and as far as possible we describe other caching solution as well. How long you do want to cache is completely op to you, but keep in mind that the reviews, trustscore evt. does only update as often as you do. So caching to long will result in the data not being updated often enough, and to often result in bader performance for the user.
-			An sample feed can be download from here <a href="http://s.trustpilot.com/tpelements/917278/f.json.gz" target="_blank">http://s.trustpilot.com/tpelements/917278/f.json.gz</a>. This feed is for the demo webshop www.demoshop.com. You can see the reviews on this domain here <a href="http://www.trustpilot.com/review/demoshop.com" target="_blank">Demoshop</a>  and you are also welcome to create more reviews on this site as it is for demo usage only.
-			</p>
+            <p>The feed is hosted at Amazon in Ireland and there is no limt  on how often you download it. But generally we recommend you to cache the result in an sutiable way for you so that the user does not have to wait for the server to download the feed.</p>
+            <p>In all the samples we use caching in some kind and as far as possible we describe other caching solution as well. How long you do want to cache is completely op to you, but keep in mind that the reviews, trustscore evt. does only update as often as you do. So caching to long will result in the data not being updated often enough, and to often result in bader performance for the user.</p>
+            <p>An sample feed can be download from here <a href="http://s.trustpilot.com/tpelements/917278/f.json.gz" target="_blank">http://s.trustpilot.com/tpelements/917278/f.json.gz</a>. This feed is for the demo webshop www.demoshop.com. You can see the reviews on this domain here <a href="http://www.trustpilot.com/review/demoshop.com" target="_blank">Demoshop</a>  and you are also welcome to create more reviews on this site as it is for demo usage only.</p>
             <p><a class="btn" href="#">View details &raquo;</a></p>
           </div>
         </section>
         
         <hr />
         
-		<!-- JSON DOC -->
+        <!-- JSON DOC -->
         <section class="row" id="jsondoc">
           <div class="span16">
             <h2>JSON Documentation</h2>
-			
-			<p>
-				We deliver the feed as a single JSON object.
-			</p>
-			
-			<h3>File location</h3>
-			<p>
-				The link for your specific JSON file can be found at <a href="http://b2b.trustpilot.com/Modules/Plugins">http://b2b.trustpilot.com/Modules/Plugins</a> (login required).<br />
-				A demo feed can be found at <a href="http://s.trustpilot.com/tpelements/917278/f.json.gz">http://s.trustpilot.com/tpelements/917278/f.json.gz</a>.
-			</p>
-			
-			<h3>Compression</h3>
+            
+            <p>We deliver the feed as a single JSON object.</p>
+            
+            <h3>File location</h3>
+            
+            <p>The link for your specific JSON file can be found at <a href="http://b2b.trustpilot.com/Modules/Plugins">http://b2b.trustpilot.com/Modules/Plugins</a> (login required).<br />
+              A demo feed can be found at <a href="http://s.trustpilot.com/tpelements/917278/f.json.gz">http://s.trustpilot.com/tpelements/917278/f.json.gz</a>.</p>
+            
+            <h3>Compression</h3>
 			<p>
 				The JSON feed file is zipped with gzip.
 			</p>
@@ -359,23 +349,23 @@
 			</p>
             <h4>Download and parse feed</h4>
 			<p>The code that downloads the feed and parses it.</p>
-			<script src="https://gist.github.com/1258943.js"> </script>
-			<h4>Models</h4>
-			<p>The models the feed is parsed into.</p>
-			<!-- GetFeed -->
-			<script src="https://gist.github.com/1258991.js"> </script> 
-			<!-- Review -->
-			<script src="https://gist.github.com/1258992.js"> </script>
-			<!-- User -->
-			<script src="https://gist.github.com/1259000.js"> </script>
-			<!-- ReviewCount -->
-			<script src="https://gist.github.com/1258995.js"> </script>
-			<!-- Trustscore -->
-			<script src="https://gist.github.com/1258999.js"> </script>
-			<!-- Category -->
-			<script src="https://gist.github.com/1258988.js"> </script>
-			<!-- Time -->
-			<script src="https://gist.github.com/1258989.js"> </script>
+			<script src="https://gist.github.com/1258943.js"></script>
+			<h4>Models</h4>                                  
+			<p>The models the feed is parsed into.</p>       
+			<!-- GetFeed -->                                 
+			<script src="https://gist.github.com/1258991.js"></script> 
+			<!-- Review -->                                  
+			<script src="https://gist.github.com/1258992.js"></script>
+			<!-- User -->                                    
+			<script src="https://gist.github.com/1259000.js"></script>
+			<!-- ReviewCount -->                             
+			<script src="https://gist.github.com/1258995.js"></script>
+			<!-- Trustscore -->                              
+			<script src="https://gist.github.com/1258999.js"></script>
+			<!-- Category -->                                
+			<script src="https://gist.github.com/1258988.js"></script>
+			<!-- Time -->                                    
+			<script src="https://gist.github.com/1258989.js"></script>
 			<p>For the full sample go to the source and download. Please let us now if there is any thing wrong with the sample, either by pushing an fix or by submitting an issue.</p>
 			<p>The sample is aviable in both ASP.NET 3.5 and MVC 3 (Razor) version.</p>
 			<p><a class="btn" href="#">View details &raquo;</a></p>
@@ -411,13 +401,15 @@
           </div>
         </section>
         
-           <hr />
         <footer>
           <p>&copy; Trustpilot 2011.<br />
             <small>Code samples are for inspirational purposes only and are not being supported by Trustpilot Technical Support.</small></p>
         </footer>
       </div>
     </div>
-
+    
+    <!-- Scripts section -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/scripts.js" type="text/javascript"></script>
   </body>
 </html>
