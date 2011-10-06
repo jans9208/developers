@@ -99,6 +99,10 @@
             <p>The feed is hosted at Amazon in Ireland and there is no limt  on how often you download it. But generally we recommend you to use some kind of caching layer mostly so that the user does not have to wait for the server to download the feed at every request.</p>
             <p>In all the samples we use caching in some kind and as far as possible we describe other caching solution as well. How long you do want to cache is completely op to you, but keep in mind that the reviews, trustscore evt. does only update as often as you do. So caching to long will result in the data not being updated often enough, and to often result in poor performance for the user.</p>
             <p>An sample feed can be download from here <a href="http://s.trustpilot.com/tpelements/917278/f.json.gz" target="_blank">http://s.trustpilot.com/tpelements/917278/f.json.gz</a>. This feed is for the demo webshop www.demoshop.com. You can see the reviews on this domain here <a href="http://www.trustpilot.com/review/demoshop.com" target="_blank">Demoshop reviews</a>  and you are also welcome to create more reviews on this site as it is for demo usage only.</p>
+            
+            <h3>Making it move with jQuery</h3>
+            <p>Some would maybe like their own plugin to be animated. We've decided not to include any examples of JavaScript animations in our documentation. Instead we can refer to our Showcases section, where you may be able to see real world examples of moving Trustpilot integrations.</p>
+            <p>We will, however, recommend you to use a JavaScript framework like <a href="http://www.jquery.com">jQuery</a> (or any other framework), that have great documentation, to achieve the wished animations of your plugin. You can use jQuery methods like <code>animate()</code>, <code>slideUp</code>, <code>slideDown()</code>, <code>fadeIn()</code> or <code>fadeOut()</code> to get the exact behavior that you may want. There is a <a href="http://api.jquery.com/category/effects/">full list</a> of effects over at the jQuery documentation.</p>
             <p><a class="btn" href="#">View details &raquo;</a></p>
           </div>
         </section>
@@ -394,7 +398,12 @@
             <h2>PHP Sample</h2>
             <p>Here is an sample of how to download the JSON feed, unpack the gzip format and parse it to a PHP variable.</p>
             <p>The sample does not use any kind caching, which is <strong>highly recommended</strong> to add if used in a production environment. Adding cache functionality will make sure that the user does not have to wait for the server to download the feed and parse it on every single request.</p>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
+            <p>Since the JSON feed is gzipped we've included a function for unpacking the gzipped file.</p>
+            <script src="https://gist.github.com/1266730.js"></script>
+            <script src="https://gist.github.com/1266746.js"></script>
+            <p>For the full sample go to the source and download. Please let us now if there is any thing wrong with the sample, either by doing a pull request fix or by submitting an issue.</p>
+            <p>The sample is supported by PHP version >= 5.2.</p>
+            <p><a class="btn" href="https://github.com/trustpilot/developers/tree/master/samples/PHP">View PHP sample folder on GitHub &raquo;</a></p>
           </div>
         </section>
 		   <hr />
