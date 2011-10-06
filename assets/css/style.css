@@ -1,0 +1,15 @@
+body {
+  padding-top: 60px;
+}
+
+.sidebar {
+  position: fixed; top: 60px;
+}
+
+ul {
+  
+}
+
+  ul li {
+    color: #404040;
+  }
