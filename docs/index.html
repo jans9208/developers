@@ -297,16 +297,246 @@
           </div>
         </section>
 		<hr />
+		
 		<!-- Widget settings -->
         <section class="row" id="widget">
           <div class="span16">
             <h2>Widget Settings</h2>
-            <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-			<p>incl. some jquery etc links</p>
+			
+			<p>
+				The widget can be configured without using the module on the Trustpilot B2B site (<a href="http://b2b.trustpilot.com/Modules/Widget">http://b2b.trustpilot.com/Modules/Widget</a>, login required).<br />
+				To do so, you need to change the content of the <code>data-tp-settings</code> attribute of the widget.<br />
+				All the settings should be comma separated. E.g. <code>data-tp-settings="domainId:917278,fontSize:12"</code>
+			</p>
+			<p>
+				This table shows all the possible configurations of the widget:
+			</p>
+			
+			<table>
+				<tr>
+					<th>Setting name</th>
+					<th>Description</th>
+					<th>Required</th>
+					<th>Valid values</th>
+					<th>Default value</th>
+					<th>Example</th>
+				</tr>
+				<tr>
+					<td>domainId</td>
+					<td>Your personal domain Id</td>
+					<td>yes</td>
+					<td>Use your domain Id. This can be found in the snippet in <a href="http://b2b.trustpilot.com/Modules/Widget">http://b2b.trustpilot.com/Modules/Widget</a>.</td>
+					<td>n/a</td>
+					<td>domainId:917278</td>
+				</tr>
+				<tr>
+					<td>width</td>
+					<td>The width of the widget, in pixels</td>
+					<td>no</td>
+					<td>Positive integers</td>
+					<td>180</td>
+					<td>width:200</td>
+				</tr>
+				<tr>
+					<td>height</td>
+					<td>The height of the property. <i>See also the useDynamicHeight property</i></td>
+					<td>no</td>
+					<td>Positive integers</td>
+					<td>500</td>
+					<td>height:600</td>
+				</tr>
+				<tr>
+					<td>useDynamicHeight</td>
+					<td>Set to true to auto resize the height. Otherwise the height property will be used. <i>Note: This only works in HTML5 browsers, i.e. all browser not Internet Explorer < v.9. In these browsers the height property will always be used regardless of this setting.</i></td>
+					<td>no</td>
+					<td>true, false</td>
+					<td>true</td>
+					<td>useDynamicHeight:false</td>
+				</tr>
+				<tr>
+					<td>numOfReviews</td>
+					<td>The number of reviews to show</td>
+					<td>no</td>
+					<td>1-10</td>
+					<td>3</td>
+					<td>numOfReviews:5</td>
+				</tr>
+				<tr>
+					<td>showReviews</td>
+					<td>Set to true if the review part of the box should be shown</td>
+					<td>no</td>
+					<td>true, false</td>
+					<td>true</td>
+					<td>showReviews:false</td>
+				</tr>
+				<tr>
+					<td>showHeader</td>
+					<td>Set to true if the header part of the box should be shown</td>
+					<td>no</td>
+					<td>true, false</td>
+					<td>true</td>
+					<td>showHeader:false</td>
+				</tr>
+				<tr>
+					<td>showRatingText</td>
+					<td>Set to true if the header should contain a text telling the user to make a review</td>
+					<td>no</td>
+					<td>true, false</td>
+					<td>true</td>
+					<td>showRatingText:false</td>
+				</tr>
+				<tr>
+					<td>showComplementaryText</td>
+					<td>Set to true if the header should contain a text showing the amount of reviews</td>
+					<td>no</td>
+					<td>true, false</td>
+					<td>true</td>
+					<td>showRatingText:false</td>
+				</tr>
+				<tr>
+					<td>showUserImage</td>
+					<td>Set to true if each review should have a user image</td>
+					<td>no</td>
+					<td>true, false</td>
+					<td>true</td>
+					<td>showUserImage:false</td>
+				</tr>
+				<tr>
+					<td>showDate</td>
+					<td>Set to true if each review should have a date</td>
+					<td>no</td>
+					<td>true, false</td>
+					<td>true</td>
+					<td>showDate:false</td>
+				</tr>
+				<tr>
+					<td>usePopup</td>
+					<td>Set to true if clicking the widget should open a popup showing more reviews</td>
+					<td>no</td>
+					<td>true, false</td>
+					<td>true</td>
+					<td>usePopup:false</td>
+				</tr>				
+				<tr>
+					<td>useDarkLogo</td>
+					<td>Set to true to use the dark Trustpilot logo in the bottom bar. Otherwise the light Trustpilot logo will be used.</td>
+					<td>no</td>
+					<td>true, false</td>
+					<td>true</td>
+					<td>useDarkLogo:false</td>
+				</tr>
+				<tr>
+					<td>fontSize</td>
+					<td>The font size to use, in pixels</td>
+					<td>no</td>
+					<td>Integers greater than 0</td>
+					<td>11</td>
+					<td>fontSize:9</td>
+				</tr>
+				<tr>
+					<td>fontFamily</td>
+					<td>The font family to use</td>
+					<td>no</td>
+					<td>Helvetica, Arial, LucidaGrande, Tahoma, Verdana, TimesNewRoman</td>
+					<td>Helvetica</td>
+					<td>fontFamily:Verdana</td>
+				</tr>
+				<tr>
+					<td>fontColor</td>
+					<td>The font color to use</td>
+					<td>no</td>
+					<td>All hex color values without the '#'</td>
+					<td>444444</td>
+					<td>fontColor:000000</td>
+				</tr>
+				<tr>
+					<td>linkColor</td>
+					<td>The color of links in the widget</td>
+					<td>no</td>
+					<td>All hex color values without the '#'</td>
+					<td>CE5600</td>
+					<td>linkColor:0000FF</td>
+				</tr>
+				<tr>
+					<td>fontBarColor</td>
+					<td>The font color to use on the top bar</td>
+					<td>no</td>
+					<td>All hex color values without the '#'</td>
+					<td>444444</td>
+					<td>fontBarColor:44FF44</td>
+				</tr>
+				<tr>
+					<td>bgColor</td>
+					<td>The background color to use</td>
+					<td>no</td>
+					<td>All hex color values without the '#'</td>
+					<td>FFFFFF</td>
+					<td>bgColor:FFFFFF</td>
+				</tr>
+				<tr>
+					<td>bgBarColor</td>
+					<td>The background color of the two bars</td>
+					<td>no</td>
+					<td>All hex color values without the '#'</td>
+					<td>DDDDDD</td>
+					<td>bgBarColor:FFFFFF</td>
+				</tr>
+				<tr>
+					<td>borderRadius</td>
+					<td>The border radius of the surrounding box</td>
+					<td>no</td>
+					<td>Non-negative integers</td>
+					<td>5</td>
+					<td>borderRadius:10</td>
+				</tr>
+				<tr>
+					<td>borderWidth</td>
+					<td>The border width of the surrounding box</td>
+					<td>no</td>
+					<td>Non-negative integers</td>
+					<td>1</td>
+					<td>borderWidth:2</td>
+				</tr>
+				<tr>
+					<td>borderColor</td>
+					<td>The color of the border of the surrounding box</td>
+					<td>no</td>
+					<td>All hex color values without the '#'</td>
+					<td>444444</td>
+					<td>borderColor:222222</td>
+				</tr>
+				<tr>
+					<td>locale</td>
+					<td>The language to use in the widget</td>
+					<td>no</td>
+					<td>
+						All the locales supported by Trustpilot. Currently:
+						<ul>
+							<li>da-DK - Danish</li>
+							<li>de-DE - German</li>
+							<li>en-GB - English</li>
+							<li>es-ES - Spanish</li>
+							<li>fi-FI - Finish</li>
+							<li>fr-FR - French</li>
+							<li>it-IT - Italian</li>
+							<li>nb-NO - Norwegian</li>
+							<li>nl-NL - Dutch</li>
+							<li>sv-SE - Swedish</li>
+						</ul>
+					</td>
+					<td>The locale of the domain.</td>
+					<td>locale:en-GB</td>
+				</tr>
+				
+				
+			</table>
+			
 			<p><a class="btn" href="#">View details &raquo;</a></p>
           </div>
         </section>
-		   <hr />
+		
+		<hr />
+		
 		 <!-- categorybadge settings -->
         <section class="row" id="categorybadge">
           <div class="span16">
