@@ -96,12 +96,12 @@
           <div class="span16">
             <h2>Basics</h2>
             <p>The feed is hosted at Amazon in Ireland and there is no limt  on how often you download it. But generally we recommend you to use some kind of caching layer mostly so that the user does not have to wait for the server to download the feed at every request.</p>
-            <p>We try to input caching in the samples as well as far as possible we describe other caching solution as well. How long you do want to cache is completely op to you, but keep in mind that the reviews, trustscore evt. does only update as often as you do. So caching to long will result in the data not being updated often enough, and to often result in poor performance for the user.</p>
+            <p>We try to input caching in the samples as well as far as possible we describe other caching solution as well. How long you do want to cache is completely op to you, but keep in mind that the reviews, trustscore evt. does only update as often as you do. So caching too long will result in the data not being updated often enough, and caching too short will result in poor performance for the user.</p>
             <p>An sample feed can be download from here <a href="http://s.trustpilot.com/tpelements/917278/f.json.gz" target="_blank">http://s.trustpilot.com/tpelements/917278/f.json.gz</a>. This feed is for the demo webshop www.demoshop.com. You can see the reviews on this domain here <a href="http://www.trustpilot.com/review/demoshop.com" target="_blank">Demoshop reviews</a>  and you are also welcome to create more reviews on this site as it is for demo usage only.</p>
             
             <h3>Making it move with jQuery</h3>
             <p>Some would maybe like their own plugin to be animated. We've decided not to include any examples of JavaScript animations in our documentation. Instead we can refer to our Showcases section, where you may be able to see real world examples of moving Trustpilot integrations.</p>
-            <p>We will, however, recommend you to use a JavaScript framework like <a href="http://www.jquery.com">jQuery</a> (or any other framework), that have great documentation, to achieve the wished animations of your plugin. You can use jQuery methods like <code>animate()</code>, <code>slideUp</code>, <code>slideDown()</code>, <code>fadeIn()</code> or <code>fadeOut()</code> to get the exact behavior that you may want. There is a <a href="http://api.jquery.com/category/effects/">full list</a> of effects over at the jQuery documentation.</p>
+            <p>We will, however, recommend you to use a JavaScript framework like <a href="http://www.jquery.com" target="_blank">jQuery</a> (or any other framework), that have great documentation, to achieve the wished animations of your plugin. You can use jQuery methods like <code>animate()</code>, <code>slideUp</code>, <code>slideDown()</code>, <code>fadeIn()</code> or <code>fadeOut()</code> to get the exact behavior that you may want. There is a <a href="http://api.jquery.com/category/effects/" target="_blank">full list</a> of effects over at the jQuery documentation.</p>
           </div>
         </section>
         
@@ -530,8 +530,57 @@
         <section class="row" id="categorybadge">
           <div class="span16">
             <h2>CategoryBadge Settings</h2>
-            <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <p>incl. some jquery etc links</p>
+			<p>
+				Just as with the <a href="#widget">widget</a>, the category badge can be configured by changing the snippet.
+			</p>
+            
+			<p>This table shows all the possible configurations of the category badge:</p>
+            
+            <table>
+              <tr>
+                <th>Setting name</th>
+                <th>Description</th>
+                <th>Required</th>
+                <th>Valid values</th>
+                <th>Default value</th>
+                <th>Example</th>
+              </tr>
+              <tr>
+                <td>domainId</td>
+                <td>Your personal domain Id</td>
+                <td>yes</td>
+                <td>Use your domain Id. This can be found in the snippet in <a href="http://b2b.trustpilot.com/Modules/CategoryBadges">http://b2b.trustpilot.com/Modules/CategoryBadges</a>.</td>
+                <td>n/a</td>
+                <td>domainId:917278</td>
+              </tr>
+              <tr>
+                <td>size</td>
+                <td>The width of the badge, in pixels</td>
+                <td>no</td>
+                <td>
+					The badge comes in these sizes:
+					<ul>
+						<li>100 (100x86px)</li>
+						<li>120 (120x103px)</li>
+						<li>140 (140x120px)</li>
+						<li>180 (180x155px)</li>
+						<li>220 (220x189px)</li>
+						<li>280 (280x240px)</li>
+					</ul>
+				</td>
+                <td>140</td>
+                <td>size:180</td>
+              </tr>
+			  <tr>
+                <td>categoryId</td>
+                <td>The id of the category to show. This id can be found in the snippet in the <a href="http://b2b.trustpilot.com/Modules/CategoryBadges">module</a> (login required)</td>
+                <td>no</td>
+                <td>All categories that the domain is in</td>
+                <td>If no categoryId is given, or the given categoryId is not valid, we will choose the category in which your domain is best placed.</td>
+                <td>categoryId:64</td>
+              </tr>
+
+			</table>
           </div>
         </section>
       
@@ -543,10 +592,10 @@
             <h2>JSONP</h2>
             <p>If you prefer getting the data from JavaScript the JSON is also available in a JSONP format. The callback function is trustpilot_jsonp_callback. For the rest the documentation is the same as the <a href="#jsondoc">JSON feed</a>.</p>
             <h3>File location</h3>
-            <p>The link for your specific JSONP file can be found at <a href="http://b2b.trustpilot.com/Modules/Plugins">http://b2b.trustpilot.com/Modules/Plugins</a> (login required).<br />A demo feed can be found at <a href="http://s.trustpilot.com/tpelements/18027/f.jsonp" target="_blank">http://s.trustpilot.com/tpelements/18027/f.jsonp</a> or if you run an SSL site you can use <a href="https://ssl.trustpilot.com/tpelements/18027/f.jsonp" target="_blank">https://ssl.trustpilot.com/tpelements/18027/f.jsonp</a>.</p>
+            <p>The link for your specific JSONP file can be found at <a href="http://b2b.trustpilot.com/Modules/Plugins">http://b2b.trustpilot.com/Modules/Plugins</a> (login required).<br />A demo feed can be found at <a href="http://s.trustpilot.com/tpelements/917278/f.jsonp" target="_blank">http://s.trustpilot.com/tpelements/917278/f.jsonp</a> or if you run an SSL site you can use <a href="https://ssl.trustpilot.com/tpelements/917278/f.jsonp" target="_blank">https://ssl.trustpilot.com/tpelements/917278/f.jsonp</a>.</p>
             <h3>jQuery JSONP example</h3>
-            <p>Below is an example of retrieving the JSON feed with the built-in support for JSONP in <a href="http://www.jquery.com">jQuery</a>. This example will log the retrieved JSON object to the developer console in the web browser.</p>
-            <script src="https://gist.github.com/1267039.js"></script>
+            <p>Below is an example of retrieving the JSON feed with the built-in support for JSONP in <a href="http://www.jquery.com" target="_blank">jQuery</a>. This example will log the retrieved JSON object to the developer console in the web browser.</p>
+            <script src="https://gist.github.com/1267994.js"> </script>
           </div>
         </section>
         
@@ -556,8 +605,8 @@
         <section class="row" id="seo">
           <div class="span16">
             <h2>Search engine optimization</h2>
-            <p>If you want to show your Trustpilot reviews on our webpage the widget is a great and easy way of showing them. But the widget is an iFrame solution and therefor you will not get any SEO juice from all the nice reviews. For that reason Trustpilot also provide a <a href="#jsondoc">JSON feed</a> with the same information as the widget just in JSON format. This feed can be used to build the same widget and just for the propose of getting SEO for the reviews or it can be used for building a widget that support you design the way you thing it will best support your business. </p>
-            <p>There has been build some samples in different languages (<a href="#netsample">C# .NET Sample</a>, <a href="#phpsample">PHP Sample</a>). If your favorite language is not ammong them you are welcome to push i to the source and your sample will be added with the other samples (all credits will go to you of cource).</p>
+            <p>If you want to show your Trustpilot reviews on our webpage the widget is a great and easy way of showing them. But the widget is an iFrame solution and therefore you will not get any SEO juice from all the nice reviews. For that reason Trustpilot also provide a <a href="#jsondoc">JSON feed</a> with the same information as the widget just in JSON format. This feed can be used to build the same widget and just for the propose of getting SEO for the reviews or it can be used for building a widget that support you design the way you thing it will best support your business. </p>
+            <p>There has been build some samples in different languages (<a href="#netsample">C# .NET Sample</a>, <a href="#phpsample">PHP Sample</a>). If your favorite language is not among them you are welcome to push it to the source and your sample will be added with the other samples (all credits will go to you of cource).</p>
           </div>
         </section>
         
@@ -566,11 +615,11 @@
         <section class="row" id="netsample">
           <div class="span16">
             <h2>C# .NET Sample</h2>
-            <p>Here is an sample of how to download the JSON feed and parsing it to an set of models in C# .NET. </p>
-            <p>The sample uses System.Web.Caching for caching the result as this is highly recommende to use some kind of cache. Caching in this situation makes sure that the user does not have to wait for the server to download the feed and parse it every time.</p>
-            <p>There is several other way of doing this caching, one way could be just to download the feed and save it to local disk, and then every ones in a will download the file again.<br />
+            <p>Here is an sample of how to download the JSON feed and parsing it to a set of models in C#.NET. </p>
+            <p>The sample uses System.Web.Caching for caching the result as it is highly recommended to use some kind of cache. Caching in this situation makes sure that the user does not have to wait for the server to download the feed and parse it every time.</p>
+            <p>There are several other way of caching, one way could be just to download the feed and save it to local disk, and then every once in a while download the file again.<br />
               You could also parse this to you database and then get the data from there at every request.</p>
-            <p>In all cases it could be an good idea to have an service running in the background that does fetch and parse (if need) the feed. This has the advantage that the user never has to wait for the data to download and parse. This is how ever not necessary as the feed normally is not bigger then 3-4KB.</p>
+            <p>In all cases it could be a good idea to have an service running in the background that fetches and parses (if needed) the feed. This has the advantage that the user never has to wait for the data to download and parse. This is, however, not necessary as the feed normally is not bigger then 3-4KB.</p>
             <p>If the FeedModel is not in the cache the code downloads the feed directly from the server. It then deserializes the string downloaded to an the FeedModel created for the purpose. The FeedModel can then be used to show the data in the frontend.</p>
             
             <h4>Download and parse feed</h4>
@@ -600,7 +649,7 @@
             <!-- Time -->
             <script src="https://gist.github.com/1258989.js"></script>
             
-            <p>For the full sample go to the source and download. Please let us now if there is any thing wrong with the sample, either by doing a pull request fix or by submitting an issue.</p>
+            <p>For the full sample go to the source and download. Please let us now if there is anything wrong with the sample, either by making a pull request fix or by submitting an issue.</p>
             <p>The sample is aviable in both ASP.NET 3.5 and MVC 3 (Razor) version.</p>
             <p><a class="btn" href="https://github.com/trustpilot/developers/tree/master/samples">View samples on GitHub &raquo;</a></p>
           </div>
@@ -612,12 +661,12 @@
         <section class="row" id="phpsample">
           <div class="span16">
             <h2>PHP Sample</h2>
-            <p>Here is an sample of how to download the JSON feed, unpack the gzip format and parse it to a PHP variable.</p>
+            <p>Here is a sample of how to download the JSON feed, unpack the gzip format and parse it to a PHP variable.</p>
             <p>The sample does not use any kind caching, which is <strong>highly recommended</strong> to add if used in a production environment. Adding cache functionality will make sure that the user does not have to wait for the server to download the feed and parse it on every single request.</p>
             <p>Since the JSON feed is gzipped we've included a function for unpacking the gzipped file.</p>
             <script src="https://gist.github.com/1266730.js"></script>
             <script src="https://gist.github.com/1266746.js"></script>
-            <p>For the full sample go to the source and download. Please let us now if there is any thing wrong with the sample, either by doing a pull request fix or by submitting an issue.</p>
+            <p>For the full sample go to the source and download. Please let us now if there is anything wrong with the sample, either by making a pull request fix or by submitting an issue.</p>
             <p>The sample is supported by PHP version >= 5.2.</p>
             <p><a class="btn" href="https://github.com/trustpilot/developers/tree/master/samples/PHP">View PHP sample folder on GitHub &raquo;</a></p>
           </div>
