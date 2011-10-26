@@ -41,7 +41,7 @@
           <h5>Documentation</h5>
           <ul>
             <li><a href="#jsondoc">JSON feed</a></li>
-            <li><a href="#widget">Widget</a></li>
+            <li><a href="#trustbox">TrustBox</a></li>
             <li><a href="#categorybadge">CategoryBadge</a></li>
             <li><a href="#jsonp">JSONP</a></li>
             <li><a href="#seo">SEO</a></li>
@@ -74,7 +74,7 @@
         <div class="row" id="introduction">
           <div class="span6">
             <h2>Custom integrations</h2>
-            <p>Partners of Trustpilot are offered a widget that they can easily embed with an iframe on their website. However, there are limits of using an iframe to show web content on a website.</p>
+            <p>Partners of Trustpilot are offered a widget that they can easily embed with an iframe on their website. There are, however, limits of using an iframe to show web content on a website.</p>
             <p>Therefore we've opened up for web developers to get our data through a JSON feed to make their own awesome Trustpilot integrations and gain some of many benefits such as SEO, faster load times etc.</p>
           </div>
           <div class="span5">
@@ -96,7 +96,7 @@
           <div class="span16">
             <h2>Basics</h2>
             <p>The feed is hosted at Amazon in Ireland and there is no limt  on how often you download it. But generally we recommend you to use some kind of caching layer mostly so that the user does not have to wait for the server to download the feed at every request.</p>
-            <p>We try to input caching in the samples as well as far as possible we describe other caching solution as well. How long you do want to cache is completely op to you, but keep in mind that the reviews, trustscore evt. does only update as often as you do. So caching too long will result in the data not being updated often enough, and caching too short will result in poor performance for the user.</p>
+            <p>We try to input caching in the samples and as far as possible we describe other caching solution as well. How long you do want to cache is completely op to you, but keep in mind that the reviews, trustscore evt. does only update as often as you do. So caching too long will result in the data not being updated often enough, and caching too short will result in poor performance for the user.</p>
             <p>An sample feed can be download from here <a href="http://s.trustpilot.com/tpelements/917278/f.json.gz" target="_blank">http://s.trustpilot.com/tpelements/917278/f.json.gz</a>. This feed is for the demo webshop www.demoshop.com. You can see the reviews on this domain here <a href="http://www.trustpilot.com/review/demoshop.com" target="_blank">Demoshop reviews</a>  and you are also welcome to create more reviews on this site as it is for demo usage only.</p>
             
             <h3>Making it move with jQuery</h3>
@@ -295,11 +295,11 @@
         
         <hr />
         
-        <!-- Widget settings -->
-        <section class="row" id="widget">
+        <!-- TrustBox settings -->
+        <section class="row" id="trustbox">
           <div class="span16">
-            <h2>Widget Settings</h2>
-            <p>The widget can be configured without using the module on the Trustpilot B2B site (<a href="http://b2b.trustpilot.com/Modules/Widget">http://b2b.trustpilot.com/Modules/Widget</a>, login required).<br />
+            <h2>TrustBox Settings</h2>
+            <p>TrustBox is the official widget from Trustpilot. The widget can be configured without using the module on the Trustpilot B2B site (<a href="http://b2b.trustpilot.com/Modules/Widget">http://b2b.trustpilot.com/Modules/Widget</a>, login required).<br />
               To do so, you need to change the content of the <code>data-tp-settings</code> attribute of the widget.<br />
               All the settings should be comma separated. E.g. <code>data-tp-settings="domainId:917278,fontSize:12"</code>
             </p>
@@ -691,7 +691,7 @@
         <section class="row" id="feedback">
           <div class="span16">
             <h2>Feedback</h2>
-            <p>Here we would very much like to show your cool cases of all you out there using the JSON feed. If you have created something awesome please provide us with an link, source (optional) and an description on how and which technologies you used building it. We will then share it here so that everyone can see it. You and your company will of curse get credit for it.</p>
+            <p>Your feedback is important to us. We strongly advice you to share your bug findings, questions and feature suggestions on our issue tracker over at GitHub. Here we would very much like to take your suggestions into consideration and fix whatever bugs you may have found.</p>
             <p><a class="btn" href="https://github.com/trustpilot/developers/issues">Go to GitHub Issue tracker &raquo;</a></p>
           </div>
         </section>
@@ -701,8 +701,8 @@
       
         <section class="row" id="contribute">
           <div class="span16">
-            <h2>Contribute</h2>
-            <p>Here we would very much like to show your cool cases of all you out there using the JSON feed. If you have created something awesome please provide us with an link, source (optional) and an description on how and which technologies you used building it. We will then share it here so that everyone can see it. You and your company will of curse get credit for it.</p>
+            <h2>Contribute – fork on GitHub</h2>
+            <p>Download, fork, pull, file issues, and more with the official Trustpilot Plugins repo on GitHub. We're strongly suggesting that everyone who's capable of contributing to do so. Together we can make Trustpilot Plugins even more awesome.</p>
             <p><a href="http://help.github.com/fork-a-repo/" class="btn">See how to fork a GitHub repo &raquo;</a></p>
           </div>
         </section>
